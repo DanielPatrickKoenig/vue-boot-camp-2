@@ -1,0 +1,8 @@
+{{extend 'layout.html'}}
+<table-template :avg="averages" :totalKey="totalKey" :masterKey="masterKey" :refresh="refresh" :update_prop="update_prop" :regionKey="regionKey"></table-template>
+
+
+<chart-template  v-for='(v,i) in chartManifest' :s="((i == 0 && masterKey != genreKey) || (i == 2 && totalKey != regionKey)) ? 'height:500px;width:500px;background-color:rgba(255,255,255,.2);' : 'height:500px;width:500px;'" :v="v" :i="i"></chart-template>
+
+
+    
